@@ -1,0 +1,32 @@
+.wrapper {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+            'h h h h h h'
+            'l n c c c r';
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 1fr 1fr 4fr 1fr;
+    grid-gap: 10px;
+}
+
+.header {
+    background-color: #ff5900;
+    grid-area: h;
+}
+
+.space {
+    grid-area: s;
+}
+
+.sidebar {
+    grid-area: n;
+}
+
+.left {
+    grid-area: l;
+}
+
+.right {
+    grid-area: r;
+}
