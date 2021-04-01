@@ -1,0 +1,53 @@
+import React, {useEffect} from 'react';
+import {getTest} from "../../Redux/single-test-reducer";
+import s from './../TestsPage.module.css';
+import {NavLink} from "react-router-dom";
+import close from './../../images/close-x.svg';
+import {useDispatch, useSelector} from "react-redux";
+
+export const SingleTest = ({testId, setIsModal}) => {
+
+    const test = useSelector(state => state.singleTestPage)
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getTest(testId));
+    }, [testId, dispatch])
+
+    return <div className={s.singleTestWrapper}>
+        <div className={s.singleTestContentBlock}>
+            <h1>{test.name}</h1>
+            <NavLink
+                to={'/tests'}
+                onClick={() => setIsModal(false)}
+            >
+                <img src={close} alt={''}/>
+            </NavLink>
+        </div>
+    </div>
+}
+.singleTestWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleTestContentBlock {
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.singleTestWrapper h1 {
+    margin: 0;
+    color: #ff5900;
+    font-size: 24pt;
+}

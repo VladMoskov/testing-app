@@ -6,7 +6,7 @@ import close from './../../images/close-x.svg';
 import {useDispatch, useSelector} from "react-redux";
 import Preloader from "../../common/Preloader";
 
-export const SingleTestContainer = ({testId, setIsModal}) => {
+export const SingleTest = ({testId, setIsModal}) => {
 
     const test = useSelector(state => state.singleTestPage)
     const dispatch = useDispatch();
@@ -19,7 +19,9 @@ export const SingleTestContainer = ({testId, setIsModal}) => {
     return <div className={s.wrapper}>
         <div className={s.contentWrapper}>
 
-            {test.isFetching ? <Preloader/> : <div className={s.content}>
+            {test.isFetching && <Preloader/>}
+
+            {!test.isFetching && <div className={s.content}>
 
                 <div className={s.header}>
                     <h1>{test.name}</h1>
@@ -30,9 +32,8 @@ export const SingleTestContainer = ({testId, setIsModal}) => {
                         <img src={close} alt={''}/>
                     </NavLink>
                 </div>
-
-            </div>
-            }
+                
+            </div>}
         </div>
     </div>
 }
