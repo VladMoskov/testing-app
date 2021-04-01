@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import {TestItem} from "./TestItem/TestItem";
-import {SingleTest} from "./SingleTest/SingleTest";
+import {SingleTestContainer} from "./SingleTest/SingleTestContainer";
 import Preloader from "../common/Preloader";
 import {getTests, setIsFetching} from "../Redux/tests-reducer";
 import {useDispatch, useSelector} from "react-redux";
@@ -11,27 +11,32 @@ export const TestsPage = () => {
 
     const dispatch = useDispatch();
     const testId = useParams().testId;
-    const testsPage = useSelector(state => state.testsPage)
+    const testsPage = useSelector(state => state.testsPage);
+    const [isModal, setIsModal] = useState(false);
 
+    const tests = testsPage.tests
+        .map((test, index) =>
+            <TestItem
+                key={test.id}
+                test={test}
+                even={index % 2}
+            />)
 
     useEffect(() => {
         dispatch(getTests());
         return () => dispatch(setIsFetching(true));
     }, [dispatch])
 
+    useEffect(()=> {
+       if (testId) setIsModal(true);
+    },[testId])
+
     if (testsPage.isFetching) {
         return <Preloader/>
     } else {
         return <div className={s.wrapper}>
-            {testId
-                ? <SingleTest id={testId}/>
-                : testsPage.tests.map((test, index) =>
-                    <TestItem
-                        key={test.id}
-                        test={test}
-                        even={index%2}
-                    />)
-            }
+            {tests}
+            {isModal && <SingleTestContainer testId={testId} setIsModal={setIsModal}/>}
         </div>
     }
 }

@@ -1,32 +1,4 @@
-import React, {useEffect} from 'react';
-import {getTest} from "../../Redux/single-test-reducer";
-import s from './../TestsPage.module.css';
-import {NavLink} from "react-router-dom";
-import close from './../../images/close-x.svg';
-import {useDispatch, useSelector} from "react-redux";
-
-export const SingleTest = ({testId, setIsModal}) => {
-
-    const test = useSelector(state => state.singleTestPage)
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(getTest(testId));
-    }, [testId, dispatch])
-
-    return <div className={s.singleTestWrapper}>
-        <div className={s.singleTestContentBlock}>
-            <h1>{test.name}</h1>
-            <NavLink
-                to={'/tests'}
-                onClick={() => setIsModal(false)}
-            >
-                <img src={close} alt={''}/>
-            </NavLink>
-        </div>
-    </div>
-}
-.singleTestWrapper {
+.wrapper {
     position: absolute;
     left: 0;
     top: 0;
@@ -38,16 +10,63 @@ export const SingleTest = ({testId, setIsModal}) => {
     align-items: center;
 }
 
-.singleTestContentBlock {
+.contentWrapper {
     width: 70%;
     height: 80%;
     background-color: white;
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 25px;
 }
 
-.singleTestWrapper h1 {
+.body {
+    padding: 20px;
+}
+
+.header h1 {
     margin: 0;
     color: #ff5900;
     font-size: 24pt;
+    font-family: Ubuntu, sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3f4e5d;
+}
+
+.content h3 {
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 10pt;
+    font-weight: 400;
+    font-family: Ubuntu, sans-serif;
+    margin: 0;
+}
+
+.content h2 {
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 16pt;
+    font-weight: 400;
+    font-family: Ubuntu, sans-serif;
+    margin: 0;
+}
+
+.startButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.startButton button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #3f4e5d;
+    outline: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
 }

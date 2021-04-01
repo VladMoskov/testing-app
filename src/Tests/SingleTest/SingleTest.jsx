@@ -1,39 +1,29 @@
-import React, {useEffect} from 'react';
-import {getTest, setIsFetching} from "../../Redux/single-test-reducer";
+import React from 'react';
 import s from './SingleTest.module.css';
 import {NavLink} from "react-router-dom";
 import close from './../../images/close-x.svg';
-import {useDispatch, useSelector} from "react-redux";
-import Preloader from "../../common/Preloader";
 
-export const SingleTestContainer = ({testId, setIsModal}) => {
+export const SingleTest = ({test, setIsModal}) => {
 
-    const test = useSelector(state => state.singleTestPage)
-    const dispatch = useDispatch();
+    return <div className={s.content}>
 
-    useEffect(() => {
-        dispatch(getTest(testId));
-        return () => dispatch(setIsFetching(true))
-    }, [testId, dispatch])
-
-    return <div className={s.wrapper}>
-        <div className={s.contentWrapper}>
-
-            {test.isFetching ? <Preloader/> : <div className={s.content}>
-
-                <div className={s.header}>
-                    <h1>{test.name}</h1>
-                    <NavLink
-                        to={'/tests'}
-                        onClick={() => setIsModal(false)}
-                    >
-                        <img src={close} alt={''}/>
-                    </NavLink>
-                </div>
-
+        <div className={s.header}>
+            <h1>{test.name}</h1>
+            <h3>id: {test.id}</h3>
+            <NavLink
+                to={'/tests'}
+                onClick={() => setIsModal(false)}
+            >
+                <img src={close} alt={''}/>
+            </NavLink>
+        </div>
+        <div className={s.body}>
+            <h2>{test.description}</h2>
+            <div className={s.startButton}>
+                <button>Начать</button>
             </div>
-            }
         </div>
     </div>
+
 }
 

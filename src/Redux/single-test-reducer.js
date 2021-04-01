@@ -9,7 +9,7 @@ let initialState = {
     questions: null,
     description: null,
     answers: null,
-    isFetching: false
+    isFetching: true
 }
 
 const singleTestReducer = (state = initialState, action) => {
@@ -18,14 +18,13 @@ const singleTestReducer = (state = initialState, action) => {
 
         case SET_TEST:
             return {
-                ...state,
                 ...action.test
             }
 
         case SET_IS_FETCHING:
             return {
                 ...state,
-                isFetching: !state.isFetching
+                isFetching: action.isFetching
             }
 
         default:
@@ -34,14 +33,14 @@ const singleTestReducer = (state = initialState, action) => {
 }
 
 const setTest = (test) => ({type: SET_TEST, test});
-const setIsFetching = () => ({type: SET_IS_FETCHING});
+export const setIsFetching = (isFetching) => ({type: SET_IS_FETCHING, isFetching});
 
 export const getTest = (testId) => async (dispatch) => {
-    dispatch(setIsFetching());
+    dispatch(setIsFetching(true));
     try {
         const res = await testsAPI.getTest(testId)
         dispatch(setTest(res.data));
-        dispatch(setIsFetching());
+        dispatch(setIsFetching(false));
     } catch (e) {
         console.log(e.message);
     }
