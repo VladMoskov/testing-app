@@ -1,53 +1,99 @@
 {
   "tests": [
     {
-      "id": 2,
-      "name": "name2",
-      "questions": [],
-      "description": "description2",
-      "answers": [
+      "name": "Первый тест",
+      "description": "Первый тест из редактора тестов",
+      "questions": [
         {
-          "string": "",
-          "bool": false
+          "question": "первый вопрос",
+          "answers": [
+            {
+              "answer": "ответ 1"
+            },
+            {
+              "answer": "ответ 2"
+            },
+            {
+              "answer": "ответ 3"
+            },
+            {
+              "answer": "ответ 4"
+            }
+          ]
+        },
+        {
+          "question": "второй вопрос",
+          "answers": [
+            {
+              "answer": "ответ 1"
+            },
+            {
+              "answer": "ответ 2"
+            },
+            {
+              "answer": "ответ 3"
+            }
+          ]
         }
-      ]
+      ],
+      "id": 3
     },
     {
-      "id": 3,
-      "name": "name3",
-      "questions": [],
-      "description": "description3",
-      "answers": [
+      "name": "Второй тест",
+      "description": "описание второго теста",
+      "questions": [
         {
-          "string": "",
-          "bool": false
+          "question": "Вопрос второго теста",
+          "answers": [
+            {
+              "answer": "ответ1"
+            },
+            {
+              "answer": "ответ 2",
+              "isCorrect": false
+            },
+            {
+              "answer": "ответ 3"
+            },
+            {
+              "answer": "правильный ответ",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "question": "Второй вопрос второго теста",
+          "answers": [
+            {
+              "answer": "ответ 1"
+            },
+            {
+              "answer": "правильный ответ",
+              "isCorrect": true
+            }
+          ]
         }
-      ]
+      ],
+      "id": 4
     },
     {
-      "id": 4,
-      "name": "name4",
-      "questions": [],
-      "description": "description4",
-      "answers": [
+      "name": "Третий тест из редактора",
+      "description": "Описание третьего теста",
+      "questions": [
         {
-          "string": "",
-          "bool": false
+          "question": "только один вопрос",
+          "answers": [
+            {
+              "answer": "правильный ответ",
+              "isCorrect": true
+            },
+            {
+              "answer": "не правильный ответ"
+            }
+          ]
         }
-      ]
-    },
-    {
-      "test": {
-        "firstQ": "123"
-      },
+      ],
       "id": 5
-    },
-    {
-      "test": {
-        "name": "name 5 ",
-        "description": "description 5"
-      },
-      "id": 6
     }
   ]
 }

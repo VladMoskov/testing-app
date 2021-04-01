@@ -1,20 +1,18 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import s from './TestItem.module.css';
+import s from './../TestsPage.module.css';
 
 
-const TestItem = (props) => {
+export const TestItem = ({test, even}) => {
     return (
-        <div>
-            <NavLink to={'/tests/' + props.id}>
-                <div className={s.wrapper}>
-                    <div>name:{props.name}</div>
-                    <div>id:{props.id}</div>
-                    <div>description:{props.description}</div>
+        <div  className={`${s.itemWrapper} ${even ? '' : s.dark}`}>
+            <NavLink to={'/tests/' + test.id}>
+                <div className={s.header}>
+                    <h1>{test.name}</h1>
+                    <h3>id: {test.id}</h3>
                 </div>
+                <h2>{test.description}</h2>
             </NavLink>
         </div>
     )
 }
-
-export default TestItem;

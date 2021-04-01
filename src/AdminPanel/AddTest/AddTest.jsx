@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './AddTest.module.css';
-import OneQuestionForm from "./OneQuestionForm/OneQuestionForm";
+import {OneQuestionForm} from "./OneQuestionForm/OneQuestionForm";
 
 const AddTest = (props) => {
     return (

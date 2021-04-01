@@ -15,6 +15,6 @@ export const testsAPI = {
     },
 
     postTest(test) {
-        return instance.post('tests/', {test})
+        return instance.post('tests/', test)
     }
 }
