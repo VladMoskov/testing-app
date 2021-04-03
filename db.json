@@ -94,6 +94,41 @@
         }
       ],
       "id": 5
+    },
+    {
+      "name": "Людочкин Тест",
+      "description": "первый Людочкин тест",
+      "questions": [
+        {
+          "question": "Любит ли Людочка шоколад",
+          "answers": [
+            {
+              "answer": "любит",
+              "isCorrect": true
+            },
+            {
+              "answer": "не любит"
+            },
+            {
+              "answer": "алергия"
+            }
+          ]
+        },
+        {
+          "question": "Любит ли Людочка пивко",
+          "answers": [
+            {
+              "answer": "Обожает",
+              "isCorrect": false
+            },
+            {
+              "answer": "не любит",
+              "isCorrect": true
+            }
+          ]
+        }
+      ],
+      "id": 6
     }
   ]
 }

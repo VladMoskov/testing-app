@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './SingleTest.module.css';
 import {NavLink} from "react-router-dom";
 import close from './../../images/close-x.svg';
+import {TestInProgress} from "../TestInProgress/TestInProgress";
 
 export const SingleTest = ({test, setIsModal}) => {
+
+    const [inProgress, setInProgress] = useState(false)
 
     return <div className={s.content}>
 
@@ -17,12 +20,17 @@ export const SingleTest = ({test, setIsModal}) => {
                 <img src={close} alt={''}/>
             </NavLink>
         </div>
-        <div className={s.body}>
-            <h2>{test.description}</h2>
-            <div className={s.startButton}>
-                <button>Начать</button>
+
+        {inProgress
+            ? <TestInProgress test={test}/>
+            : <div className={s.body}>
+                <h2>{test.description}</h2>
+                <div className={s.startButton}>
+                    <button onClick={()=>setInProgress(true)}>Начать</button>
+                </div>
             </div>
-        </div>
+        }
+
     </div>
 
 }

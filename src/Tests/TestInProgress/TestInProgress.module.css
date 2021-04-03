@@ -1,0 +1,28 @@
+.correct svg {
+    fill: green;
+}
+
+.incorrect svg {
+    fill: red;
+}
+
+.questionWrapper {
+
+}
+
+.answersWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftAnswers, .rightAnswers{
+    display: flex;
+    flex-direction: column;
+}
+
+.space {
+    background-color: #2196F3;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
