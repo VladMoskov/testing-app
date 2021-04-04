@@ -10,10 +10,11 @@ import {useDispatch} from "react-redux";
 export const TestInProgress = ({test}) => {
 
     const dispatch = useDispatch();
+    const [isDisabled, setIsDisabled] = useState(true)
     const [counter, setCounter] = useState(0);
     const initialArray = []
 
-    if (test.questions[counter]) test.questions[counter].answers.map((_, index)=>initialArray[index]=false)
+    if (test.questions[counter]) test.questions[counter].answers.map((_, index) => initialArray[index] = false)
 
     const onSubmit = (formData) => {
         dispatch(setResult(formData))
@@ -22,51 +23,72 @@ export const TestInProgress = ({test}) => {
     return <div className={s.body}>
         {test.questions[counter]
             ? <div>
-                <h1>{test.questions[counter].question}</h1>
+                <div className={s.questionWrapper}>
+                    <h1>{test.questions[counter].question}</h1>
 
-                <Form
-                    mutators={{
-                        ...arrayMutators
-                    }}
-                    onSubmit={onSubmit}
-                    render={({handleSubmit}) => {
-                        return (
-                            <form onSubmit={handleSubmit}>
-
-                                <FieldArray
-                                    initialValue={initialArray}
-                                    name={`${test.questions[counter].question}.answers`}
-                                >
-                                    {({fields}) =>
-                                        fields.map(name => (
-                                            <div key={name}>
-                                                <Field type={'checkbox'} name={`${name}.answer`} value={false}>
-                                                    {props =>
-                                                        <div>
-                                                            <input {...props.input}/>
+                    <Form
+                        mutators={{
+                            ...arrayMutators
+                        }}
+                        onSubmit={onSubmit}
+                        render={({handleSubmit}) => {
+                            return (
+                                <form onSubmit={handleSubmit}>
+                                    <div className={s.answersWrapper}>
+                                        <div className={s.leftAnswers}>
+                                            <FieldArray
+                                                initialValue={initialArray}
+                                                name={`${test.questions[counter].question}.answers`}
+                                            >
+                                                {({fields}) =>
+                                                    fields.map((name, index) => (
+                                                        <div key={name}>
+                                                            <Field type={'checkbox'} name={`${name}`}>
+                                                                {props =>
+                                                                    <div>
+                                                                        <input className={s.question} {...props.input}/>
+                                                                    </div>
+                                                                }
+                                                            </Field>
                                                         </div>
-                                                    }
-                                                </Field>
-                                            </div>
-                                        ))
-                                    }
-                                </FieldArray>
-
-                                {test.questions[counter].answers.map((a, i) => (
-                                    <div key={i}>
-                                        <h4>{i + 1} {a.answer}</h4>
+                                                    ))
+                                                }
+                                            </FieldArray>
+                                        </div>
+                                        <div className={s.rightAnswers}>
+                                            {test.questions[counter].answers.map(a => (
+                                                <div className={`${s.question} ${s.questionString}`} key={a.answer}>
+                                                    <h2>{a.answer}</h2>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                ))}
-                                <button type={'submit'}>submit</button>
-                            </form>
-                        )
-                    }}
-                />
-                <button
-                    onClick={() => setCounter(counter + 1)}
-                >
-                    next
-                </button>
+                                    <button
+                                        className={s.submit}
+                                        type={'submit'}
+                                        onClick={()=> setIsDisabled(false)}
+                                    >
+                                        Ответить
+                                    </button>
+                                </form>
+                            )
+                        }}
+                    />
+
+                </div>
+                <div className={s.nextContainer}>
+                    <button
+                        className={!isDisabled ? s.next : s.disabledNext}
+                        onClick={() => {
+                            if (!isDisabled) {
+                                setCounter(counter + 1)
+                                setIsDisabled(true)
+                            }
+                        }}
+                    >
+                        Следующий вопрос
+                    </button>
+                </div>
             </div>
             : <Result test={test}/>
         }

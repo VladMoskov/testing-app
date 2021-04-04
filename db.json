@@ -96,34 +96,75 @@
       "id": 5
     },
     {
-      "name": "Людочкин Тест",
-      "description": "первый Людочкин тест",
+      "name": "Проверка высоты ",
+      "description": "тест для проверки высоты контейнера модалки",
       "questions": [
         {
-          "question": "Любит ли Людочка шоколад",
           "answers": [
             {
-              "answer": "любит",
+              "answer": "Ответ",
               "isCorrect": true
             },
             {
-              "answer": "не любит"
+              "answer": "Второй"
             },
             {
-              "answer": "алергия"
+              "answer": "Третий"
+            },
+            {
+              "answer": "Четвертый"
+            }
+          ],
+          "question": "Вопрос"
+        },
+        {
+          "question": "Еще вопрос",
+          "answers": [
+            {
+              "answer": "первый"
+            },
+            {
+              "isCorrect": true,
+              "answer": "Второй"
+            },
+            {
+              "answer": "Третий"
+            },
+            {
+              "answer": "Четвертый"
             }
           ]
         },
         {
-          "question": "Любит ли Людочка пивко",
+          "question": "Третий вопрос",
           "answers": [
             {
-              "answer": "Обожает",
-              "isCorrect": false
+              "answer": "Первый"
             },
             {
-              "answer": "не любит",
+              "answer": "Второй"
+            },
+            {
+              "answer": "Третий"
+            },
+            {
+              "answer": "Четвертый",
               "isCorrect": true
+            }
+          ]
+        },
+        {
+          "question": "Последний вопрос",
+          "answers": [
+            {
+              "answer": "первый",
+              "isCorrect": true
+            },
+            {
+              "answer": "второй"
+            },
+            {
+              "answer": "третий"
             }
           ]
         }

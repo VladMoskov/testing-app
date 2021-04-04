@@ -22,7 +22,7 @@ export const SingleNewQuestion = ({name, index, fields, mutator}) => {
                 </div>
                 <div className={s.item}>
 
-                    <label>Question</label>
+                    <label>Вопрос</label>
                     <Field name={`${name}.question`}>
                         {props => (
                             <div>
@@ -34,7 +34,7 @@ export const SingleNewQuestion = ({name, index, fields, mutator}) => {
                                     placeholder={'Enter question'}
                                 />
                                 <div className={s.answersBlock}>
-                                    <label>Answers</label>
+                                    <label>Ответы</label>
                                     <FieldArray name={`${name}.answers`}>
                                         {({fields}) =>
                                             fields.map((name, index) => (

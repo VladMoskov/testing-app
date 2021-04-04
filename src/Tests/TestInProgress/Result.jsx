@@ -8,32 +8,54 @@ export const Result = ({test}) => {
 
     const result = useSelector(state => state.progressPage.result)
 
-
     return <div className={s.body}>
         {test.questions.map((q, i) => (
             <div key={i} className={s.questionWrapper}>
                 <h1>{q.question}</h1>
                 <div className={s.answersWrapper}>
                     <div className={s.leftAnswers}>
-                        {q.answers.map((a, i) => (
-                            <div key={i}>
-                                <h2>{a.answer}</h2>
-                                {result[q.question].answers.map((res, i) => (
-                                    <div key={i}>
-                                        {res && a.isCorrect && <img className={s.correct} src={correct} alt={''}/>}
-                                        {res && !a.isCorrect && <img className={s.correct} src={incorrect} alt={''}/>}
-                                    </div>
-                                ))}
+                        {result[q.question].answers.map((res, i) => (
+                            <div className={s.question} key={i}>
+                                {res
+                                    ? q.answers[i].isCorrect
+                                        ? <img className={s.correct} src={correct} alt={''}/>
+                                        : <img className={s.correct} src={incorrect} alt={''}/>
+                                    : <span className={s.space}/>
+                                }
                             </div>
                         ))}
                     </div>
                     <div className={s.rightAnswers}>
-
+                        {q.answers.map((a, i) => (
+                            <div className={`${s.question} ${s.questionString}`} key={i}>
+                                <h2>{a.answer}</h2>
+                            </div>
+                        ))}
                     </div>
+                </div>
+                <div className={s.correctAnswer}>
+                    <h1>Правильный ответ: {q.answers.map(a => a.isCorrect && a.answer)}</h1>
                 </div>
             </div>
         ))}
     </div>
 }
 
+/*
 
+{q.answers[i].isCorrect && res && <img className={s.correct} src={correct} alt={''}/>}
+{!q.answers[i].isCorrect && res && <img className={s.correct} src={incorrect} alt={''}/>}
+{!q.answers[i].isCorrect && !res && <span className={s.space}/>}
+{q.answers[i].isCorrect && !res && <span className={s.space}/> }
+*/
+
+/*
+
+{q.answers[i].isCorrect && res
+    ? <img className={s.correct} src={correct} alt={''}/>
+    : <span className={s.space}/>
+}
+{!q.answers[i].isCorrect && res
+    ? <img className={s.correct} src={incorrect} alt={''}/>
+    : <span className={s.space}/>
+}*/

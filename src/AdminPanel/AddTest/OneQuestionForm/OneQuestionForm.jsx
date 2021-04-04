@@ -1,7 +1,7 @@
 import s from '../AddTest.module.css';
 import {Field, Form} from "react-final-form";
 import {postNewTest} from "../../../Redux/tests-reducer";
-import React from "react";
+import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {SingleNewQuestion} from "./SingleNewQuestion";
 import {FieldArray} from "react-final-form-arrays";
@@ -10,10 +10,10 @@ import arrayMutators from 'final-form-arrays'
 export const OneQuestionForm = () => {
 
     const dispatch = useDispatch();
+    const [isDisabled, setIsDisabled] = useState(true);
 
     let onSubmit = (formData) => {
         dispatch(postNewTest(formData));
-        console.log(formData);
     }
 
     return (
@@ -36,7 +36,7 @@ export const OneQuestionForm = () => {
                             <form onSubmit={handleSubmit}>
                                 <div className={s.topBlock}>
                                     <div className={s.item}>
-                                        <label>Name</label>
+                                        <label>Название</label>
                                         <Field
                                             className={s.nameField}
                                             name='name'
@@ -45,7 +45,7 @@ export const OneQuestionForm = () => {
                                         />
                                     </div>
                                     <div className={s.item}>
-                                        <label>Description</label>
+                                        <label>Описание</label>
                                         <Field
                                             className={s.descriptionField}
                                             name='description'
