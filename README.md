@@ -13,11 +13,23 @@ In this moment include:
   6. After testing become available results-page, where you can see all questions, with your unswers and correct unswers
   
 
-### Instalation
+## Instalation
 
 1. Use `git clone https://github.com/VladMoskov/testing-app.git` to your folder
 2. Use `npm install` to get all dependent packages
 3. For save test used json-server, so after instaling use `json-server db.json` for starting server. Important, server must work at 3000 port.
 4. Use `npm start` to run an aplication.
 
+
+## Used libraries
+
+1. React
+2. Redux
+3. axios
+4. redux-thunk
+5. final-form
+6. final-form-arrays
+7. react-router-dom
+8. react-textarea-autosize
+9. json-server
 
