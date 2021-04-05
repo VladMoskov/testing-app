@@ -180,8 +180,18 @@
       "role": "тех. эксперт",
       "email": "perishvlad@gmail.com",
       "password": "1234",
-      "isAdmin": true,
-      "isAuth": true
+      "isAdmin": true
+    }
+  ],
+  "authUser": [
+    {
+      "id": 1,
+      "name": "Vlad",
+      "lastName": "Moskov",
+      "role": "тех. эксперт",
+      "email": "perishvlad@gmail.com",
+      "password": "1234",
+      "isAdmin": true
     }
   ]
 }

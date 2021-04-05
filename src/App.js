@@ -1,15 +1,21 @@
 import './App.module.css';
-import React from "react";
-import Header from "./Header/Header";
-import Sidebar from "./Sidebar/Sidebar";
-import Footer from "./Footer/Footer";
+import React, {useEffect} from "react";
+import {Header} from "./Components/Header/Header";
+import Sidebar from "./Components/Sidebar/Sidebar";
 import s from './App.module.css'
-import {Route} from "react-router-dom";
-import {TestsPage} from "./Tests/TestsPage";
-import AdminPanel from "./AdminPanel/AdminPanel";
-import AddTest from "./AdminPanel/AddTest/AddTest";
+import {Switch} from "react-router-dom";
+import {routes, Routes} from "./BLL/routes";
+import {useDispatch} from "react-redux";
+import {getAuthUser} from "./BLL/Reducers/users/auth-user";
 
 function App() {
+
+    const dispatch = useDispatch();
+
+    useEffect(()=> {
+        dispatch(getAuthUser())
+    },[dispatch])
+
     return (
         <div className={s.wrapper}>
 
@@ -21,15 +27,15 @@ function App() {
                 <Sidebar/>
             </div>
             <div className={s.content}>
-                <Route path='/tests/:testId?'
-                       render={() => <TestsPage/>}/>
-                <Route exact path='/admin-panel'
-                       render={() => <AdminPanel/>}/>
-                <Route exact path='/admin-panel/add-test'
-                       render={() => <AddTest/>}/>
+
+                <Switch>
+                    {routes.map((route, i) => (
+                        <Routes key={i} {...route} />
+                    ))}
+                </Switch>
+
             </div>
             <div className={s.right}/>
-            <Footer className={s.footer}/>
 
         </div>
     );

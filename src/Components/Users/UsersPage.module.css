@@ -1,0 +1,14 @@
+.wrapper {
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header i {
+    font-size: 10pt;
+    font-weight: 500;
+}
