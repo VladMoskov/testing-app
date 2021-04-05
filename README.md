@@ -11,6 +11,7 @@ In this moment include:
   4. For submit unswer select checkbox and click submit-button
   5. During testing 'next' button will disabled until at least one answer is selected
   6. After testing become available results-page, where you can see all questions, with your unswers and correct unswers
+  7. Loginization. You can logIn and LogOut. You can try it with email: vlad@gmail.com password: 1234
   
 
 ## Instalation
