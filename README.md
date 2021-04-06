@@ -18,7 +18,7 @@ In this moment include:
 
 1. Use `git clone https://github.com/VladMoskov/testing-app.git` to your folder
 2. Use `npm install` to get all dependent packages
-3. For save test used json-server, so after instaling use `json-server db.json` for starting server. Important, server must work at 3000 port.
+3. For save test used json-server, so after instaling use `json-server db-develop.json` for starting server. Important, server must work at 3000 port.
 4. Use `npm start` to run an aplication.
 
 
