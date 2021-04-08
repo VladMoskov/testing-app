@@ -11,13 +11,14 @@ In this moment include:
   4. For submit unswer select checkbox and click submit-button
   5. During testing 'next' button will disabled until at least one answer is selected
   6. After testing become available results-page, where you can see all questions, with your unswers and correct unswers
+  7. Loginization. You can logIn and LogOut. You can try it with email: vlad@gmail.com password: 1234
   
 
 ## Instalation
 
 1. Use `git clone https://github.com/VladMoskov/testing-app.git` to your folder
 2. Use `npm install` to get all dependent packages
-3. For save test used json-server, so after instaling use `json-server db.json` for starting server. Important, server must work at 3000 port.
+3. For save test used json-server, so after instaling use `json-server db-develop.json` for starting server. Important, server must work at 3000 port.
 4. Use `npm start` to run an aplication.
 
 
