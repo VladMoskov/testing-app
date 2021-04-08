@@ -4,13 +4,13 @@ import {actionTypes} from "../../Creators/ActionCreators";
 const testsReducer = (state = {isFetching: true}, action) => {
 
     switch (action.type) {
-        case actionTypes.GET_TESTS:
+        case actionTypes.SET_TESTS:
             return {
                 ...state,
                 tests: [...action.tests]
             }
 
-        case actionTypes.IS_FETCHING_TESTS:
+        case actionTypes.SET_IS_FETCHING_TESTS:
             return {
                 ...state,
                 isFetching: action.isFetching

@@ -1,9 +1,9 @@
 import React from 'react';
-import {TestsPage} from "../Components/Tests/TestsPage";
+import {TestsPage} from "../UI/Tests/TestsPage";
 import {Route} from "react-router-dom";
-import {AddTestPage} from "../Components/AddTest/AddTestPage";
-import {UsersPage} from "../Components/Users/UsersPage";
-import {LoginPage} from "../Components/Login/Login";
+import {AddTestPage} from "../UI/AddTest/AddTestPage";
+import {UsersPage} from "../UI/Users/UsersPage";
+import {LoginPage} from "../UI/Login/Login";
 
 
 
@@ -17,7 +17,7 @@ export const routes = [
         component: AddTestPage,
     },
     {
-        path: "/users",
+        path: "/users/:userId?",
         component: UsersPage,
     },
     {

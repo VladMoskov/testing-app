@@ -174,13 +174,78 @@
   ],
   "users": [
     {
-      "id": 0,
+      "id": 1,
       "name": "Vlad",
       "lastName": "Moskov",
       "role": "тех. эксперт",
       "email": "vlad@gmail.com",
       "password": "1234",
-      "isAdmin": true
+      "isAdmin": true,
+      "birthDay": "24.04",
+      "phoneNumber": "(099) 999 99 99",
+      "code": "5815",
+      "finishedTests": [
+        {
+          "result": {
+            "id": 4,
+            "questions": {
+              "Вопрос второго теста": {
+                "answers": [
+                  false,
+                  true,
+                  false,
+                  false
+                ]
+              },
+              "Второй вопрос второго теста": {
+                "answers": [
+                  false,
+                  true
+                ]
+              }
+            }
+          },
+          "test": {
+            "name": "Второй тест",
+            "description": "описание второго теста",
+            "questions": [
+              {
+                "question": "Вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ1"
+                  },
+                  {
+                    "answer": "ответ 2",
+                    "isCorrect": false
+                  },
+                  {
+                    "answer": "ответ 3"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              },
+              {
+                "question": "Второй вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              }
+            ],
+            "id": 4,
+            "isFetching": false
+          }
+        }
+      ]
     }
   ],
   "authUser": [
@@ -191,7 +256,72 @@
       "role": "тех. эксперт",
       "email": "vlad@gmail.com",
       "password": "1234",
-      "isAdmin": true
+      "isAdmin": true,
+      "finishedTests": [
+        {
+          "result": {
+            "id": 4,
+            "questions": {
+              "Вопрос второго теста": {
+                "answers": [
+                  false,
+                  true,
+                  false,
+                  false
+                ]
+              },
+              "Второй вопрос второго теста": {
+                "answers": [
+                  false,
+                  true
+                ]
+              }
+            }
+          },
+          "test": {
+            "name": "Второй тест",
+            "description": "описание второго теста",
+            "questions": [
+              {
+                "question": "Вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ1"
+                  },
+                  {
+                    "answer": "ответ 2",
+                    "isCorrect": false
+                  },
+                  {
+                    "answer": "ответ 3"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              },
+              {
+                "question": "Второй вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              }
+            ],
+            "id": 4,
+            "isFetching": false
+          }
+        }
+      ],
+      "birthDay": "24.04",
+      "phoneNumber": "(099) 999 99 99",
+      "code": "5815"
     }
   ]
 }

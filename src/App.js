@@ -1,7 +1,7 @@
 import './App.module.css';
 import React, {useEffect} from "react";
-import {Header} from "./Components/Header/Header";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import {Header} from "./UI/Header/Header";
+import Sidebar from "./UI/Sidebar/Sidebar";
 import s from './App.module.css'
 import {Switch} from "react-router-dom";
 import {routes, Routes} from "./BLL/routes";

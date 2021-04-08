@@ -9,7 +9,7 @@ const singleTestReducer = (state = {isFetching: true}, action) => {
                 ...action.test
             }
 
-        case actionTypes.SET_IS_FETCHING_SINGLE:
+        case actionTypes.SET_IS_FETCHING_TEST:
             return {
                 ...state,
                 isFetching: action.isFetching
