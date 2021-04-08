@@ -2,8 +2,7 @@ import React, {useEffect} from 'react';
 import {Field, Form} from "react-final-form";
 import {useDispatch, useSelector} from "react-redux";
 import {TestsPage} from "../Tests/TestsPage";
-import {getUsers} from "../../BLL/Reducers/users/users-reducer";
-import {postAuthUser} from "../../BLL/Reducers/users/auth-user";
+import {usersThunks} from "../../BLL/Creators/ThunkCreators";
 
 export const LoginPage = () => {
 
@@ -15,14 +14,14 @@ export const LoginPage = () => {
         users.forEach(user => {
             if (user.email === formData.email) {
                 if (user.password === formData.password){
-                    dispatch(postAuthUser(user))
+                    dispatch(usersThunks.postAuthUser(user))
                 } else {alert('incorrect password')}
             } else {alert('incorrect email')}
         })
     }
 
     useEffect(()=> {
-        dispatch(getUsers())
+        dispatch(usersThunks.getUsers())
     },[isAuth, dispatch])
 
     return !isAuth ?

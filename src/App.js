@@ -6,14 +6,14 @@ import s from './App.module.css'
 import {Switch} from "react-router-dom";
 import {routes, Routes} from "./BLL/routes";
 import {useDispatch} from "react-redux";
-import {getAuthUser} from "./BLL/Reducers/users/auth-user";
+import {usersThunks} from "./BLL/Creators/ThunkCreators";
 
 function App() {
 
     const dispatch = useDispatch();
 
     useEffect(()=> {
-        dispatch(getAuthUser())
+        dispatch(usersThunks.getAuthUser())
     },[dispatch])
 
     return (

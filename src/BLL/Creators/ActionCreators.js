@@ -4,7 +4,11 @@ export const actionTypes = {
     SET_RESULT: 'test-progress/SET_RESULT',
     GET_TESTS: 'tests/GET_TESTS',
     IS_FETCHING_TESTS: 'tests/IS_FETCHING',
-    ADD_TEST: 'tests/ADD_TEST'
+    ADD_TEST: 'tests/ADD_TEST',
+    SET_USERS: 'users-reducer/SET_USERS',
+    SET_IS_FETCHING_USERS: 'users-reducer/SET_ISF_ETCHING',
+    LOG_OUT: 'auth-user/LOG_OUT',
+    SET_AUTH_USER_DATA: 'auth-user/SET_AUTH_USER_DATA'
 };
 
 
@@ -21,4 +25,15 @@ export const testActions = {
     setTests: (tests) => ({type: actionTypes.GET_TESTS, tests}),
 
     setIsFetchingSingleTest: (isFetching) => ({type: actionTypes.SET_IS_FETCHING_SINGLE, isFetching})
+}
+
+export const usersActions = {
+
+    setUsers: users => ({type: actionTypes.SET_USERS, users}),
+
+    setIsFetching: (status) => ({type: actionTypes.SET_IS_FETCHING_USERS, status}),
+
+    logOut: (status) => ({type: actionTypes.LOG_OUT, status}),
+
+    setAuthUserData: (userData) => ({type: actionTypes.SET_AUTH_USER_DATA, userData})
 }

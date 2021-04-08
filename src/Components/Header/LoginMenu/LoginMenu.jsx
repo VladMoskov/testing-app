@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import s from "../Header.module.css";
 import avatar from "../../../images/user.png";
 import {useDispatch} from "react-redux";
-import {deleteAuthUser} from "../../../BLL/Reducers/users/auth-user";
+import {usersThunks} from "../../../BLL/Creators/ThunkCreators";
 
 export const LoginMenu = ({authUserData}) => {
 
@@ -25,7 +25,7 @@ export const LoginMenu = ({authUserData}) => {
         {isModal && <button
             onClick={()=> {
                 setIsModal(false);
-                dispatch(deleteAuthUser(authUserData.id))
+                dispatch(usersThunks.deleteAuthUser(authUserData.id))
             }}
             className={s.logout}
         >Logout</button>

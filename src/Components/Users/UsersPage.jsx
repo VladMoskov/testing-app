@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {getUsers} from "../../BLL/Reducers/users/users-reducer";
 import Preloader from "../common/Preloader";
 import {ItemsTable} from "../common/ItemsTable";
 import {UserItem} from "./UserItem/UserItem";
 import {Button} from "../common/Button";
 import {Link} from "react-router-dom";
+import {usersThunks} from "../../BLL/Creators/ThunkCreators";
 
 export const UsersPage = () => {
 
@@ -13,7 +13,7 @@ export const UsersPage = () => {
     const usersPage = useSelector(state => state.usersPage)
 
     useEffect(()=> {
-        dispatch(getUsers());
+        dispatch(usersThunks.getUsers());
     },[dispatch])
 
     if (usersPage.isFetching){
