@@ -1,14 +1,15 @@
 import React from 'react';
 import s from './Sidebar.module.css';
 import {NavLink} from "react-router-dom";
+import {useSelector} from "react-redux";
 
-const Sidebar = () => {
+const Sidebar = ({modalState}) => {
 
-    const isAdmin = true
+    const isAdmin = useSelector(state => state.authUser.authUserData?.isAdmin);
 
     return (
         <div>
-            <div className={s.wrapper}>
+            <div className={s.wrapper} onClick={()=>modalState[1](!modalState[0])}>
                 <div className={s.navBlock}>
                     <NavLink activeClassName={s.active} to={'/tests'}>
                         <div className={s.navItem}>Тесты</div>

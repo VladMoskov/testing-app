@@ -5,12 +5,14 @@ import Sidebar from "./UI/Sidebar/Sidebar";
 import s from './App.module.css'
 import {Switch} from "react-router-dom";
 import {routes, Routes} from "./BLL/routes";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {usersThunks} from "./BLL/Creators/ThunkCreators";
 
 function App() {
 
     const dispatch = useDispatch();
+    const isAdmin = useSelector(state => state.authUser.authUserData.isAdmin)
+    console.log(isAdmin);
 
     useEffect(()=> {
         dispatch(usersThunks.getAuthUser())

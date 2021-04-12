@@ -5,7 +5,7 @@ import s from './TestsPage.module.css';
 
 export const TestItem = ({item}) => {
     return (
-        <NavLink to={'/tests/' + item.id}>
+        <NavLink to={`/tests/${item.id}`}>
             <div className={s.header}>
                 <h1>{item.name}</h1>
                 <h3>id: {item.id}</h3>

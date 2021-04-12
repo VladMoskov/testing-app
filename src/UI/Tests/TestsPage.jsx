@@ -13,6 +13,7 @@ export const TestsPage = () => {
     const dispatch = useDispatch();
     const testId = useParams().testId;
     const testsPage = useSelector(state => state.testsPage);
+    const isAuth = useSelector(state => state.authUser.isAuth)
     const [isModal, setIsModal] = useState(false);
 
     useEffect(() => {
@@ -27,9 +28,9 @@ export const TestsPage = () => {
     if (testsPage.isFetching) {
         return <Preloader/>
     } else {
-        return <ItemsTable array={testsPage.tests} itemComponent={TestItem}>
+        return <ItemsTable isAuth={isAuth} array={testsPage.tests} itemComponent={TestItem}>
 
-            {isModal && <SingleTest testId={testId} setIsModal={setIsModal}/>}
+            {isAuth && isModal && <SingleTest testId={testId} setIsModal={setIsModal}/>}
 
         </ItemsTable>
     }

@@ -244,8 +244,309 @@
             "id": 4,
             "isFetching": false
           }
+        },
+        {
+          "id": 6,
+          "result": {
+            "Вопрос": {
+              "answers": [
+                false,
+                true,
+                false,
+                false
+              ]
+            },
+            "Еще вопрос": {
+              "answers": [
+                false,
+                false,
+                true,
+                false
+              ]
+            },
+            "Третий вопрос": {
+              "answers": [
+                false,
+                false,
+                false,
+                true
+              ]
+            },
+            "Последний вопрос": {
+              "answers": [
+                true,
+                false,
+                false
+              ]
+            }
+          },
+          "test": {
+            "name": "Проверка высоты ",
+            "description": "тест для проверки высоты контейнера модалки",
+            "questions": [
+              {
+                "answers": [
+                  {
+                    "answer": "Ответ",
+                    "isCorrect": true
+                  },
+                  {
+                    "answer": "Второй"
+                  },
+                  {
+                    "answer": "Третий"
+                  },
+                  {
+                    "answer": "Четвертый"
+                  }
+                ],
+                "question": "Вопрос"
+              },
+              {
+                "question": "Еще вопрос",
+                "answers": [
+                  {
+                    "answer": "первый"
+                  },
+                  {
+                    "isCorrect": true,
+                    "answer": "Второй"
+                  },
+                  {
+                    "answer": "Третий"
+                  },
+                  {
+                    "answer": "Четвертый"
+                  }
+                ]
+              },
+              {
+                "question": "Третий вопрос",
+                "answers": [
+                  {
+                    "answer": "Первый"
+                  },
+                  {
+                    "answer": "Второй"
+                  },
+                  {
+                    "answer": "Третий"
+                  },
+                  {
+                    "answer": "Четвертый",
+                    "isCorrect": true
+                  }
+                ]
+              },
+              {
+                "question": "Последний вопрос",
+                "answers": [
+                  {
+                    "answer": "первый",
+                    "isCorrect": true
+                  },
+                  {
+                    "answer": "второй"
+                  },
+                  {
+                    "answer": "третий"
+                  }
+                ]
+              }
+            ],
+            "id": 6,
+            "isFetching": false
+          }
+        },
+        {
+          "id": 4,
+          "result": {
+            "Вопрос второго теста": {
+              "answers": [
+                false,
+                false,
+                false,
+                true
+              ]
+            },
+            "Второй вопрос второго теста": {
+              "answers": [
+                false,
+                true
+              ]
+            }
+          },
+          "test": {
+            "name": "Второй тест",
+            "description": "описание второго теста",
+            "questions": [
+              {
+                "question": "Вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ1"
+                  },
+                  {
+                    "answer": "ответ 2",
+                    "isCorrect": false
+                  },
+                  {
+                    "answer": "ответ 3"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              },
+              {
+                "question": "Второй вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              }
+            ],
+            "id": 4,
+            "isFetching": false
+          }
+        },
+        {
+          "id": 4,
+          "result": {
+            "Вопрос второго теста": {
+              "answers": [
+                false,
+                true,
+                false,
+                false
+              ]
+            },
+            "Второй вопрос второго теста": {
+              "answers": [
+                true,
+                false
+              ]
+            }
+          },
+          "test": {
+            "name": "Второй тест",
+            "description": "описание второго теста",
+            "questions": [
+              {
+                "question": "Вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ1"
+                  },
+                  {
+                    "answer": "ответ 2",
+                    "isCorrect": false
+                  },
+                  {
+                    "answer": "ответ 3"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              },
+              {
+                "question": "Второй вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              }
+            ],
+            "id": 4,
+            "isFetching": false
+          }
+        },
+        {
+          "id": 3,
+          "result": {
+            "первый вопрос": {
+              "answers": [
+                false,
+                false,
+                false,
+                true
+              ]
+            },
+            "второй вопрос": {
+              "answers": [
+                false,
+                true,
+                false
+              ]
+            }
+          },
+          "test": {
+            "name": "Первый тест",
+            "description": "Первый тест из редактора тестов",
+            "questions": [
+              {
+                "question": "первый вопрос",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "ответ 2"
+                  },
+                  {
+                    "answer": "ответ 3"
+                  },
+                  {
+                    "answer": "ответ 4"
+                  }
+                ]
+              },
+              {
+                "question": "второй вопрос",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "ответ 2"
+                  },
+                  {
+                    "answer": "ответ 3"
+                  }
+                ]
+              }
+            ],
+            "id": 3,
+            "isFetching": false
+          }
         }
       ]
+    },
+    {
+      "id": 2,
+      "name": "Вася",
+      "lastName": "Пупкин",
+      "role": "продавец-концультант",
+      "email": "vasia@gmail.com",
+      "password": "1111",
+      "isAdmin": false,
+      "birthDay": "21.02",
+      "phoneNumber": "(099) 999 99 99",
+      "code": "12061",
+      "finishedTests": []
     }
   ],
   "authUser": [
@@ -257,6 +558,9 @@
       "email": "vlad@gmail.com",
       "password": "1234",
       "isAdmin": true,
+      "birthDay": "24.04",
+      "phoneNumber": "(099) 999 99 99",
+      "code": "5815",
       "finishedTests": [
         {
           "result": {
@@ -317,11 +621,296 @@
             "id": 4,
             "isFetching": false
           }
+        },
+        {
+          "id": 6,
+          "result": {
+            "Вопрос": {
+              "answers": [
+                false,
+                true,
+                false,
+                false
+              ]
+            },
+            "Еще вопрос": {
+              "answers": [
+                false,
+                false,
+                true,
+                false
+              ]
+            },
+            "Третий вопрос": {
+              "answers": [
+                false,
+                false,
+                false,
+                true
+              ]
+            },
+            "Последний вопрос": {
+              "answers": [
+                true,
+                false,
+                false
+              ]
+            }
+          },
+          "test": {
+            "name": "Проверка высоты ",
+            "description": "тест для проверки высоты контейнера модалки",
+            "questions": [
+              {
+                "answers": [
+                  {
+                    "answer": "Ответ",
+                    "isCorrect": true
+                  },
+                  {
+                    "answer": "Второй"
+                  },
+                  {
+                    "answer": "Третий"
+                  },
+                  {
+                    "answer": "Четвертый"
+                  }
+                ],
+                "question": "Вопрос"
+              },
+              {
+                "question": "Еще вопрос",
+                "answers": [
+                  {
+                    "answer": "первый"
+                  },
+                  {
+                    "isCorrect": true,
+                    "answer": "Второй"
+                  },
+                  {
+                    "answer": "Третий"
+                  },
+                  {
+                    "answer": "Четвертый"
+                  }
+                ]
+              },
+              {
+                "question": "Третий вопрос",
+                "answers": [
+                  {
+                    "answer": "Первый"
+                  },
+                  {
+                    "answer": "Второй"
+                  },
+                  {
+                    "answer": "Третий"
+                  },
+                  {
+                    "answer": "Четвертый",
+                    "isCorrect": true
+                  }
+                ]
+              },
+              {
+                "question": "Последний вопрос",
+                "answers": [
+                  {
+                    "answer": "первый",
+                    "isCorrect": true
+                  },
+                  {
+                    "answer": "второй"
+                  },
+                  {
+                    "answer": "третий"
+                  }
+                ]
+              }
+            ],
+            "id": 6,
+            "isFetching": false
+          }
+        },
+        {
+          "id": 4,
+          "result": {
+            "Вопрос второго теста": {
+              "answers": [
+                false,
+                false,
+                false,
+                true
+              ]
+            },
+            "Второй вопрос второго теста": {
+              "answers": [
+                false,
+                true
+              ]
+            }
+          },
+          "test": {
+            "name": "Второй тест",
+            "description": "описание второго теста",
+            "questions": [
+              {
+                "question": "Вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ1"
+                  },
+                  {
+                    "answer": "ответ 2",
+                    "isCorrect": false
+                  },
+                  {
+                    "answer": "ответ 3"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              },
+              {
+                "question": "Второй вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              }
+            ],
+            "id": 4,
+            "isFetching": false
+          }
+        },
+        {
+          "id": 4,
+          "result": {
+            "Вопрос второго теста": {
+              "answers": [
+                false,
+                true,
+                false,
+                false
+              ]
+            },
+            "Второй вопрос второго теста": {
+              "answers": [
+                true,
+                false
+              ]
+            }
+          },
+          "test": {
+            "name": "Второй тест",
+            "description": "описание второго теста",
+            "questions": [
+              {
+                "question": "Вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ1"
+                  },
+                  {
+                    "answer": "ответ 2",
+                    "isCorrect": false
+                  },
+                  {
+                    "answer": "ответ 3"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              },
+              {
+                "question": "Второй вопрос второго теста",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "правильный ответ",
+                    "isCorrect": true
+                  }
+                ]
+              }
+            ],
+            "id": 4,
+            "isFetching": false
+          }
+        },
+        {
+          "id": 3,
+          "result": {
+            "первый вопрос": {
+              "answers": [
+                false,
+                false,
+                false,
+                true
+              ]
+            },
+            "второй вопрос": {
+              "answers": [
+                false,
+                true,
+                false
+              ]
+            }
+          },
+          "test": {
+            "name": "Первый тест",
+            "description": "Первый тест из редактора тестов",
+            "questions": [
+              {
+                "question": "первый вопрос",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "ответ 2"
+                  },
+                  {
+                    "answer": "ответ 3"
+                  },
+                  {
+                    "answer": "ответ 4"
+                  }
+                ]
+              },
+              {
+                "question": "второй вопрос",
+                "answers": [
+                  {
+                    "answer": "ответ 1"
+                  },
+                  {
+                    "answer": "ответ 2"
+                  },
+                  {
+                    "answer": "ответ 3"
+                  }
+                ]
+              }
+            ],
+            "id": 3,
+            "isFetching": false
+          }
         }
-      ],
-      "birthDay": "24.04",
-      "phoneNumber": "(099) 999 99 99",
-      "code": "5815"
+      ]
     }
   ]
 }

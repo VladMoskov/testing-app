@@ -14,14 +14,11 @@ export const LoginPage = () => {
 
     const onSubmit = (formData) => {
         users.forEach(user => {
-            if (user.email === formData.email) {
-                if (user.password === formData.password) {
-                    dispatch(usersThunks.postAuthUser(user));
-                } else {
-                    alert('incorrect password')
-                }
-            } else {
-                alert('incorrect email')
+            if (user.email.toLowerCase() === formData.email.toLowerCase() && user.password === formData.password) {
+                dispatch(usersThunks.postAuthUser(user));
+            }
+            if (!users.find(user => user.email.toLowerCase() === formData.email.toLowerCase() && user.password === formData.password)) {
+                alert('incorrect email or password')
             }
         })
     }

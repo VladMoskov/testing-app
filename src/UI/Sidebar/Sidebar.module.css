@@ -1,3 +1,13 @@
+@media (max-width: 576px){
+    .wrapper {
+        position: absolute;
+        z-index: 999;
+    }
+}
+
+@media (min-width: 576px){
+
+}
 .wrapper{
     display:grid;
     width: 100%;
