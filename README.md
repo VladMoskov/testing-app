@@ -53,3 +53,7 @@ In this moment include:
 #in 'create test' page u can add questions and unswers by click buttons. Whe all will done click save and go to tests page (save feedback in develop)
 ![image](https://user-images.githubusercontent.com/67361609/115564476-28b0df00-a2c1-11eb-945a-5933b31893dd.png)
 
+#when u passing the test you need chose unswers and click 'submit'. Only after submiting the 'next' button will active
+![image](https://user-images.githubusercontent.com/67361609/115565288-eb991c80-a2c1-11eb-8a56-869e46ce0915.png)
+
+
