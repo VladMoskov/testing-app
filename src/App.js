@@ -11,7 +11,7 @@ import {usersThunks} from "./BLL/Creators/ThunkCreators";
 function App() {
 
     const dispatch = useDispatch();
-    const isAdmin = useSelector(state => state.authUser.authUserData.isAdmin)
+    const isAdmin = useSelector(state => state.authUser.authUserData?.isAdmin)
     console.log(isAdmin);
 
     useEffect(()=> {
