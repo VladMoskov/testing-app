@@ -11,7 +11,11 @@ In this moment include:
   4. For submit unswer select checkbox and click submit-button
   5. During testing 'next' button will disabled until at least one answer is selected
   6. After testing become available results-page, where you can see all questions, with your unswers and correct unswers
-  7. Loginization. You can logIn and LogOut. You can try it with email: vlad@gmail.com password: 1234
+  7. Loginization. You can logIn and LogOut. You can try it with:
+      - Admin email: vlad@gmail.com 
+              password: 1234
+      - User  email: vasia@gmail.com
+              password: 1111
   
 
 ## Instalation
@@ -33,4 +37,19 @@ In this moment include:
 7. react-router-dom
 8. react-textarea-autosize
 9. json-server
+
+## Screenshots
+
+#FIRT RUN will with logined user
+![image](https://user-images.githubusercontent.com/67361609/115563344-18e4cb00-a2c0-11eb-9453-0485b8c4b43d.png)
+
+
+#If you log out - you can see the tests, but you can't use they
+![image](https://user-images.githubusercontent.com/67361609/115563704-7f69e900-a2c0-11eb-9c23-15a452f64334.png)
+
+#if you is not admin - u can't see 'users' and 'create test' pages
+![image](https://user-images.githubusercontent.com/67361609/115564206-f1dac900-a2c0-11eb-8b8b-573b7665b4b1.png)
+
+#in 'create test' page u can add questions and unswers by click buttons. Whe all will done click save and go to tests page (save feedback in develop)
+![image](https://user-images.githubusercontent.com/67361609/115564476-28b0df00-a2c1-11eb-945a-5933b31893dd.png)
 
