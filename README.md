@@ -48,7 +48,7 @@ In this moment include:
 ![image](https://user-images.githubusercontent.com/67361609/115563704-7f69e900-a2c0-11eb-9c23-15a452f64334.png)
 
 #if you is not admin - u can't see 'users' and 'create test' pages
-![image](https://user-images.githubusercontent.com/67361609/115564206-f1dac900-a2c0-11eb-8b8b-573b7665b4b1.png)
+![image](https://user-images.githubusercontent.com/67361609/115564896-93fab100-a2c1-11eb-83f2-091049de4fdb.png)
 
 #in 'create test' page u can add questions and unswers by click buttons. Whe all will done click save and go to tests page (save feedback in develop)
 ![image](https://user-images.githubusercontent.com/67361609/115564476-28b0df00-a2c1-11eb-945a-5933b31893dd.png)
