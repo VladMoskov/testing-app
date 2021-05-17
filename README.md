@@ -1,4 +1,4 @@
-2.0 in development with express/postgre/JWT back
+2.0 in development with express/postgre/JWT back and typescript
 
 # Application for testing sales personal
 Application develops as a pet-project, later become usable in retail store, where i work.
